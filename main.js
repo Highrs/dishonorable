@@ -1,18 +1,21 @@
 'use strict';
 
-import { io } from "https://cdn.socket.io/4.3.2/socket.io.esm.min.js";
+const socket = new WebSocket("ws://localhost:8080");
 
-const socket = io("ws://localhost:3000");
+// Connection opened
+socket.addEventListener("open", (event) => {
+    let mail = "Hello Server!";
+    console.log('sending ' + mail)
+    socket.send(mail);
+});
+
+// Listen for messages
+socket.addEventListener("message", (event) => {
+    console.log("Message from server: ", event.data);
+});
 
 const main = async () => {
     console.log('Giant alien spiders are no joke!');
-
-    socket.on("hello", (arg) => {
-        console.log(arg);
-    });
-
-    socket.emit("howdy", "stranger");
-
 };
 
 window.onload = main;
