@@ -10,66 +10,24 @@ html, body {
   height: 100%;
   margin: 0;
 }
-.panel {
-  display: block;
-  margin: auto;
-  position: relative;
-  background: #363636;
-}
-.majorObject {
-  fill: #363636;
-  stroke-width: 1px;
-  stroke: #00ff66ff;
-}
-.minorObject {
-  fill: #363636;
-  stroke-width: 0.5px;
-  stroke: #00ff66ff;
-}
-.majorOrbit {
-  fill: none;
+.lobbyBox {
   stroke-width: 1px;
   stroke: #afafaf;
-  stroke-dasharray: 20 5;
   fill: #363636;
 }
-.minorOrbit {
-  fill: none;
-  stroke-width: 0.4px;
-  stroke: #c3c3c3ff;
-  stroke-dasharray: 5 10;
+.lobbyBoxSelectable {
+  stroke-width: 1px;
+  stroke: #afafaf;
+  fill: #363636;
 }
-.orbitDivLine {
-  fill: none;
-  stroke-width: 0.3px;
-  stroke: #c3c3c3ff;
-  stroke-dasharray: 20 5;
-}
-.symbolLine {
-  fill: none;
+.lobbyBoxSelectable:hover {
+  stroke: #ffb500;
   stroke-width: 2px;
-  stroke: #a3a3a3ff;
-  /* fill: #363636; */
 }
-.grid {
-  stroke-width: 0.5px;
-  stroke: #a3a3a3ff;
-  fill: none;
-}
-.gridBold {
-  stroke-width: 1px;
-  stroke: #a3a3a3ff;
-  fill: none;
-}
-.dataWindow {
-  stroke-width: 0.5px;
-  stroke: #c3c3c3ff;
+.lobbyBoxSelected {
+  stroke-width: 2px;
+  stroke: #ffb500;
   fill: #363636;
-}
-.dataLine {
-  stroke-width: 1px;
-  stroke: #c3c3c3ff;
-  fill: none;
 }
 .dataText {
   font: 0.8rem B612 Mono;
@@ -77,31 +35,27 @@ html, body {
   fill: #ffffffff;
   user-select: none;
 }
-.bold {
-  font-weight: bold;
-}
-.rangeWindow {
-  stroke-width: 0.25px;
-  stroke: #c3c3c3ff;
+.data {
   fill: #363636;
-}
-.rangeText {
-  font: 0.6rem B612 Mono;
-  fill: #a3a3a3ff;
-  user-select: none;
-  /* width: auto; */
-  /* text-align: center; */
-}
-.rangeLine {
-  fill: none;
-  stroke-width: 1px;
-  stroke: #a3a3a3ff;
-  stroke-dasharray: 1 9;
-}
-.vector {
-  fill: none;
   stroke-width: 1px;
   stroke: #ffffffff;
+}
+.mainDisplay {
+  stroke-width: 1px;
+  stroke: #afafaf;
+  fill: #363636;
+}
+.largeOverlayText {
+  font: 2rem B612 Mono;
+  stroke: none;
+  fill: #ffffff;
+  user-select: none;
+  opacity: 0.1;
+  text-anchor: middle;
+}
+.grid {
+  stroke-width: 0.5px;
+  stroke: #a3a3a3ff;
   fill: none;
 }
 .craft {
@@ -109,93 +63,16 @@ html, body {
   stroke-width: 1px;
   stroke: #00ff66ff;
 }
-.craftDataText {
-  font: 1rem B612 Mono;
-  stroke: none;
-  fill: #ffffffff;
-  user-select: none;
+.enemy {
+  stroke: #ff0000;
 }
-.intercept {
-  fill: none;
-  stroke-width: 1px;
-  stroke: #ffffffff;
-}
-.bodyZone {
-  fill: none;
+.healthSquare {
   stroke-width: 0.5px;
   stroke: #a3a3a3ff;
-  stroke-dasharray: 2 1;
+  fill: #ffffff;
 }
-.redStroke {
-  stroke: #ff0000ff !important;
-}
-.station {
+.depleted {
+  stroke-width: 0.5px;
+  stroke: #a3a3a3ff;
   fill: #363636;
-  stroke-width: 1px;
-  stroke: #00ff66ff;
-}
-.star {
-  fill: #363636;
-  stroke-width: 1px;
-}
-.frame {
-  fill: none;
-  stroke-width: 1px;
-  stroke: #ffffffff;
-}
-.standardBox{
-  fill: #363636;
-  stroke-width: 1px;
-  stroke: #ffffffff;
-}
-.standardBoxSelectable {
-  fill: #363636;
-  stroke-width: 1px;
-  stroke: #ffffffff;
-}
-.standardBoxSelectable:hover {
-  stroke: #ffb500;
-  stroke-width: 2px;
-}
-.standardLine {
-  fill: none;
-  stroke-width: 1px;
-  stroke: #ffffffff;
-}
-.scaleEmpty {
-  fill: #363636;
-  stroke-width: 1px;
-  stroke: #ffffffff;
-}
-.scaleFull {
-  fill: #ffffffff;
-  stroke-width: 1px;
-  stroke: #ffffffff;
-}
-.UIcon{
-  fill: #363636;
-  stroke-width: 3px;
-  stroke: #ffffffff;
-}
-
-.standardSelector {
-  fill: none;
-  stroke: none;
-}
-.standardSelector:hover {
-  stroke: #ffb500;
-  stroke-width: 2px;
-}
-.invisibleBox {
-  fill: rgba(175, 128, 168, 0);
-  stroke: none;
-}
-/* .selectBracket {
-  fill: none;
-  stroke-width: 0px;
-  stroke: ;
-} */
-.shadow {
-  stroke: none;
-  fill: #000000;
 }
