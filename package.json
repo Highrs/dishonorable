@@ -14,8 +14,8 @@
   "license": "ISC",
   "dependencies": {
     "onml": "^2.1.0",
-    "ws": "^8.14.2",
-    "tspan": "^0.4.0"
+    "tspan": "^0.4.0",
+    "ws": "^8.14.2"
   },
   "devDependencies": {
     "browserify": "^17.0.0",
