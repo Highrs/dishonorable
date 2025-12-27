@@ -12,16 +12,24 @@ const mkRndr = (place) => {return renderer(document.getElementById(place));};
 
 const drawStatic = () => {
     return getSvg({w:getPageWidth(), h:getPageHeight(), i:'allTheStuff'}).concat([
-        ['g', {id: 'screenFrame'}]
+        ['g', {id: 'screenFrame'}],
+        ['g', {id: 'display'}]
     ]);
 };
 
 const drawScreenFrame = () => {
-    let frame = ['g', {}]
-    frame.push( ['g', {},
-        ['rect', tt( 5, 5, {width: getPageWidth()-10, height: getPageHeight()-10, class: 'mainDisplay'})]
+    return ['rect', tt( 0.5, 0.5, {width: getPageWidth()-1, height: getPageHeight()-1, class: 'mainDisplay'})];
+}
+
+const drawConnectingScreen = () => {
+    let screen = ['g', {id: 'screenConnecting'}];
+    screen.push(['g', tt(getPageWidth()/2, getPageHeight()/2) ,
+        ['text', {class: 'connectingText'}, 'CONNECTING'],
+        ['circle', { r:'5', cx:-20, cy:10, class: 'dot dot1'}],
+        ['circle', { r:'5', cx:0, cy:10, class: 'dot dot2'}],
+        ['circle', { r:'5', cx:20, cy:10, class: 'dot'}]
     ]);
-    return frame;
+    return screen;
 }
 
 let renderers = {};
@@ -43,4 +51,9 @@ exports.initialDraw = () => {
     renderers.resizeWindow = resizeWindow;
 
     window.addEventListener('resize', function() {resizeWindow();});
+}
+
+exports.connectingScreen = () => {
+    let renderScreenLoading = mkRndr('display');
+    renderScreenLoading(drawConnectingScreen());
 }

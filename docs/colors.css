@@ -5,74 +5,44 @@ html, body {
   overflow: hidden;
   cursor: crosshair;
 }
-/* document { font-size:14px; } */
 #content {
   height: 100%;
   margin: 0;
 }
-.lobbyBox {
-  stroke-width: 1px;
+.mainDisplay {
+  stroke-width: 2px;
   stroke: #afafaf;
   fill: #363636;
 }
-.lobbyBoxSelectable {
-  stroke-width: 1px;
-  stroke: #afafaf;
-  fill: #363636;
-}
-.lobbyBoxSelectable:hover {
-  stroke: #ffb500;
-  stroke-width: 2px;
-}
-.lobbyBoxSelected {
-  stroke-width: 2px;
-  stroke: #ffb500;
-  fill: #363636;
-}
-.dataText {
-  font: 0.8rem B612 Mono;
+.connectingText {
+  font: 1rem B612 Mono;
   stroke: none;
   fill: #ffffffff;
   user-select: none;
-}
-.data {
-  fill: #363636;
-  stroke-width: 1px;
-  stroke: #ffffffff;
-}
-.mainDisplay {
-  stroke-width: 1px;
-  stroke: #afafaf;
-  fill: #363636;
-}
-.largeOverlayText {
-  font: 2rem B612 Mono;
-  stroke: none;
-  fill: #ffffff;
-  user-select: none;
-  opacity: 0.1;
   text-anchor: middle;
 }
-.grid {
-  stroke-width: 0.5px;
-  stroke: #a3a3a3ff;
-  fill: none;
+.bold {
+  font-weight: bold;
 }
-.craft {
-  fill: #363636;
-  stroke-width: 1px;
-  stroke: #00ff66ff;
+
+.dot {
+  animation:pulse 1.4s infinite ease-in-out both;
+  fill: #ffffffff;
 }
-.enemy {
-  stroke: #ff0000;
+.dot1 {
+  animation-delay: -0.32s
 }
-.healthSquare {
-  stroke-width: 0.5px;
-  stroke: #a3a3a3ff;
-  fill: #ffffff;
+.dot2 {
+  animation-delay: -0.16s
 }
-.depleted {
-  stroke-width: 0.5px;
-  stroke: #a3a3a3ff;
-  fill: #363636;
+@keyframes pulse {
+  0%, 80%, 100% {
+    opacity: 0.0;
+    trasform: scale (0.8);
+  }
+  40% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
+
